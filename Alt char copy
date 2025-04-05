@@ -1,0 +1,23 @@
+package test;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileCpy {
+    public static void main(String[] args) {
+        int character;
+        int index = 0;
+        try (FileReader reader = new FileReader("C:\\Users\\HP\\Desktop\\aditya_O4\\Example.txt");
+             FileWriter writer = new FileWriter("C:\\Users\\HP\\Desktop\\aditya_O4\\Example2.txt")) {
+            while ((character = reader.read()) != -1) {
+                if (index % 2 == 0) {
+                    writer.write(character); 
+                }
+                index++; 
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
