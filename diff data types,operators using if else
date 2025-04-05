@@ -1,0 +1,43 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello " + "Neha");
+        int a = 10;
+        int b = 20;
+        a = 20;
+        int c = a + b;
+        String s = "Neha";
+        String g = " Roll No70";
+        char d = 'A';
+        System.out.println("result=" + c);
+        System.out.print(s);
+        System.out.println(g);
+        System.out.println(+d);
+        int x = 20, y = 10;
+        x += y;
+        System.out.println("result=" + x);
+        x -= y;
+        System.out.println("result=" + x);
+        x *= y;
+        System.out.println("result=" + x);
+        x /= y;
+        System.out.println("result= " + x);
+        x %= y;
+        System.out.println("result=" + x);
+        System.out.println("Bitwise Operator Operations");
+        int p = 5;
+        int q = 7;
+        int OR = q | p;
+        System.out.println("result=" + OR);
+        int AND = q & p;
+        System.out.println("result=" + AND);
+        int XOR = q ^ p;
+        System.out.println("result=" + XOR);
+        int complement = ~q;
+        System.out.println("result=" + complement);
+        if (x > y) {
+            System.out.println("Greater number is " + x);
+        } else {
+            System.out.println("Greater number is " + y);
+        }
+    }
+}
