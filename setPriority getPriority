@@ -1,0 +1,43 @@
+ package test;
+ import java.lang.Thread;
+ class Task111 extends Thread{
+ public void run() {
+ System.out.println("Task1 is running");
+ System.out.println(Thread.currentThread().getName()
+ + " is running with priority "
+ + Thread.currentThread().getPriority());
+ }
+ }
+class Task112 extends Thread{
+ public void run() {
+ System.out.println("Task2 is running");
+ System.out.println(Thread.currentThread().getName()
+ + " is running with priority "
+ + Thread.currentThread().getPriority());
+ }
+ }
+ class Task113 extends Thread{
+ public void run() {
+ System.out.println("Task3 is running");
+ System.out.println(Thread.currentThread().getName()
+ + " is running with priority "
+ + Thread.currentThread().getPriority());
+ }
+ }
+ public class Priority {
+ public static void main(String []args)
+ {
+ Task111 task1= new Task111();
+ Thread t1 = new Thread(task1);
+ Task112 task2= new Task112();
+ Thread t2 = new Thread(task2);
+ Task113 task3= new Task113();
+ Thread t3 = new Thread(task3);
+ t1.setPriority(10);
+ t2.setPriority(2);
+ t3.setPriority(3);
+ t1.start();
+ t2.start();
+ t3.start();
+ }
+ }
