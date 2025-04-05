@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Account {
+
+    static int withdraw(int amount, double withdraw) {
+        if (amount > withdraw) {
+            amount -= withdraw;
+        } else {
+            System.out.println("Insufficient amount");
+        }
+        return amount;
+    }
+
+    static int deposit(int amount, double deposit) {
+        if (deposit > 0) {
+            amount += deposit;
+        } else {
+            System.out.println("Invalid amount");
+        }
+        return amount;
+    }
+
+    public Account() {
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Account Number: ");
+        String number = sc.nextLine();
+
+        System.out.print("Enter Account Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Account Balance: ");
+        int balance = sc.nextInt();
+
+        System.out.print("Enter the amount to deposit: ");
+        double depositAmt = sc.nextDouble();
+        balance = deposit(balance, depositAmt);
+
+        System.out.print("Enter amount to withdraw: ");
+        double withdrawAmount = sc.nextDouble();
+        balance = withdraw(balance, withdrawAmount);
+
+        System.out.println("Withdrawal successful! Current balance: " + balance);
+        System.out.println("Exit Code");
+
+        sc.close();
+    }
+}
