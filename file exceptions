@@ -1,0 +1,17 @@
+package test;	
+
+import java.io.*;
+import java.util.Scanner;
+
+class FIle{
+  public static void main(String[]args){
+  try{
+	  File myObj = new File("C:\\Users\\HP\\Desktop\\Java\\New.txt");
+    System.out.println(myObj);  
+  }catch(Exception e){
+    System.out.println("File error");
+  }
+  System.out.println("Program Continues");
+    }
+}
+  
