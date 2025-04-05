@@ -1,0 +1,20 @@
+interface MyInterface {
+    void display();
+    void show();
+}
+
+public class InterfaceDemo implements MyInterface {
+    public void display() {
+        System.out.println("Display method called.");
+    }
+
+    public void show() {
+        System.out.println("Show method called.");
+    }
+
+    public static void main(String[] args) {
+        InterfaceDemo obj = new InterfaceDemo();
+        obj.display();
+        obj.show();
+    }
+}
