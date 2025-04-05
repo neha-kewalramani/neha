@@ -1,0 +1,32 @@
+abstract class IICalculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+    int sub(int a, int b) {
+        return a - b;
+    }
+    abstract int largest(int a, int b);
+    abstract int mul(int a, int b);
+    abstract int div(int a, int b);
+}
+class Calculator extends IICalculator {
+    int largest(int a, int b) {
+        return Math.max(a, b);
+    }
+    int mul(int a, int b) {
+        return a * b;
+    }
+    int div(int a, int b) {
+        return a / b;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println("Addition: " + calc.add(5, 6));
+        System.out.println("Subtraction: " + calc.sub(5, 6));
+        System.out.println("Multiplication: " + calc.mul(5, 6));
+        System.out.println("Division: " + calc.div(12, 6));
+        System.out.println("Largest: " + calc.largest(5, 6));
+    }
+}
